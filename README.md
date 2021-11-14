@@ -1,4 +1,4 @@
-# Docker-Pixelmon 1.12.2-8.0.2
+# Docker-Pixelmon 1.12.2-8.3.3
 ![ydaft](https://forthebadge.com/images/badges/you-didnt-ask-for-this.svg)
 <br>
 ![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg) 
@@ -9,30 +9,16 @@
 
 DockerFile for Pixelmon Mod
 ## Versions
-pixelmon reforged 1.12.2-8.0.2<br/>
-spongeforge 1.12.2-2838-7.2.2<br/>
+pixelmon reforged 1.12.2-8.3.3<br/>
+spongeforge 1.12.2-2838-7.3.0<br/>
 forge 1.12.2-14.23.5.2854<br/>
-
-## Installation
-
-### If you want to have a 4gb ram Server just do
-```bash
-docker run -d -p 25565:25565/tcp -p 25565:25565/udp ucode1337/pixelmon_reforged
-```
-
-### If you want to have a X gb ram Server just do
-```bash
-docker run -d -e Xms=1G -e Xmx=6G -p 25565:25565/tcp -p 25565:25565/udp ucode1337/pixelmon_reforged
-```
-Xms = Min Memory Allocation
-Xmx = Max Memory Allocation
 
 ### Build from Source
 ```bash
-git clone https://git.ucode.space/Phil/docker-pixelmon-reforged.git
-cd docker-pixelmon-reforged
+git clone https://github.com/gforke97/docker-pixelmon.git
+cd docker-pixelmon
 nano Dockerfile # if you want to change something
 docker build . -t pixelmon
-docker run -d -e Xms=1G -e Xmx=6G -p 25565:25565/tcp -p 25565:25565/udp pixelmon
+docker run -d -p 25565:25565/tcp -p 25565:25565/udp pixelmon
 ```
 #### Enjoy
