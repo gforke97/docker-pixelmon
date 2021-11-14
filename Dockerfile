@@ -1,4 +1,4 @@
-FROM alpine:3.7
+FROM alpine
 
 LABEL maintainer "Phil K (ucode1337/ucode.space)"
 
@@ -12,7 +12,7 @@ RUN apk add --update --no-cache openjdk8-jre wget
 
 RUN mkdir -p /pixelmon/mods && mkdir /data
 RUN wget -O /pixelmon/forge-installer.jar https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.12.2-14.23.5.2855/forge-1.12.2-14.23.5.2855-installer.jar && \
-    wget -O /pixelmon/mods/spongeforge.jar https://repo.spongepowered.org/maven/org/spongepowered/spongeforge/1.12.2-2838-7.3.1-RC4093/spongeforge-1.12.2-2838-7.3.1-RC4093.jar && \
+    wget -O /pixelmon/mods/spongeforge.jar https://repo.spongepowered.org/maven/org/spongepowered/spongeforge/1.12.2-2838-7.3.0/spongeforge-1.12.2-2838-7.3.0.jar && \
     wget -O /pixelmon/mods/Pixelmon-server.jar https://download.nodecdn.net/containers/reforged/server/release/8.3.3/Pixelmon-1.12.2-8.3.3-server.jar
 RUN cd /pixelmon && \
     echo eula=true > eula.txt && \
